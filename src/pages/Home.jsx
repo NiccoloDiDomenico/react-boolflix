@@ -12,8 +12,8 @@ function Home() {
                 <div className="row">
                     {
                         movies.map((curMovie) => (
-                            <div className="col">
-                                <Card key={curMovie.id} movie={curMovie} />
+                            <div key={curMovie.id} className="col" >
+                                <Card movie={curMovie} />
                             </div>
                         ))
                     }

@@ -44,3 +44,9 @@ main {
   gap: 3px;
   list-style: none;
 }
+
+.card img {
+  width: 15px;
+  height: 10px;
+  margin-inline-start: 3px;
+}
