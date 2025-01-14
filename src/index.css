@@ -7,3 +7,35 @@
 img {
   max-width: 100%;
 }
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  /* debug */
+  height: 100px;
+  background-color: aqua;
+}
+
+main {
+  /* debug */
+  height: 100vh;
+  background-color: aquamarine;
+}
+
+.row {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: calc(100%/3 - 20px);
+  gap: 5px;
+}
