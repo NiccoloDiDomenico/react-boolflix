@@ -2,7 +2,6 @@ import { useContext } from "react";
 import GlobalContext from "../contexts/GlobalContext";
 import Card from "../components/Card";
 
-
 function Home() {
     const { movies } = useContext(GlobalContext);
 
@@ -13,7 +12,9 @@ function Home() {
                 <div className="row">
                     {
                         movies.map((curMovie) => (
-                            <Card key={curMovie.id} movie={curMovie} />
+                            <div className="col">
+                                <Card key={curMovie.id} movie={curMovie} />
+                            </div>
                         ))
                     }
                 </div>
