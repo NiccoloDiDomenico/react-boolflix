@@ -35,6 +35,7 @@ function Card(props) {
                     <li>Titolo: {props.item.title || props.item.name}</li>
                     <li>Data di rilascio: {props.item.release_date}</li>
                     <li>Voto: {renderStars(props.item.vote_average)}</li>
+                    <li>Descrizione: {props.item.overview.slice(0, 150)}...</li>
                     <li>Language: {renderFlag(props.item.original_language)}</li>
                 </ul>
             </div>
