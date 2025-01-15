@@ -8,18 +8,18 @@ function Card(props) {
         if (stringToCheck === "en") {
             return <img src={imgEn} alt="en" />
         } else if (stringToCheck === "it") {
-            return <img src={imgIt} alt="" />
+            return <img src={imgIt} alt="it" />
         } else {
-            return <img src={imgUn} alt="" />
+            return <img src={imgUn} alt="un" />
         }
     }
 
     return (
         <ul className="card">
-            <li>Titolo: {props.movie.title}</li>
-            <li>Data di rilascio: {props.movie.release_date}</li>
-            <li>Voto: {props.movie.vote_average}</li>
-            <li>Language: {getFlag(props.movie.original_language)}</li>
+            <li>Titolo: {props.item.title || props.item.name}</li>
+            <li>Data di rilascio: {props.item.release_date}</li>
+            <li>Voto: {props.item.vote_average}</li>
+            <li>Language: {getFlag(props.item.original_language)}</li>
         </ul>
     )
 }

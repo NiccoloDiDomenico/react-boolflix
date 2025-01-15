@@ -3,17 +3,29 @@ import GlobalContext from "../contexts/GlobalContext";
 import Card from "../components/Card";
 
 function Home() {
-    const { movies } = useContext(GlobalContext);
+    const { movies, series } = useContext(GlobalContext);
 
     return (
         <>
             <section className="container">
-                <h1>La tua libreria...</h1>
+                {/* Film */}
+                <h1>Film</h1>
                 <div className="row">
                     {
-                        movies.map((curMovie) => (
-                            <div key={curMovie.id} className="col" >
-                                <Card movie={curMovie} />
+                        movies.map((curItem) => (
+                            <div key={curItem.id} className="col" >
+                                <Card item={curItem} />
+                            </div>
+                        ))
+                    }
+                </div>
+                {/* Series */}
+                <h1>Serie TV</h1>
+                <div className="row">
+                    {
+                        series.map((curItem) => (
+                            <div key={curItem.id} className="col" >
+                                <Card item={curItem} />
                             </div>
                         ))
                     }
