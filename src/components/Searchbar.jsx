@@ -1,23 +1,20 @@
 import { useContext, useState } from "react";
 import GlobalContext from "../contexts/GlobalContext";
 
-
 function Searchbar() {
     const [searchValue, setSearchValue] = useState("");
-    const { getMovies, getSeries } = useContext(GlobalContext);
+    const { getAll } = useContext(GlobalContext);
 
     function handleClick(event) {
         event.preventDefault();
-        getMovies(searchValue);
-        getSeries(searchValue);
+        getAll(searchValue);
         setSearchValue("");
     }
 
     function handleKeyUp(event) {
         if (event.key === "Enter") {
             event.preventDefault();
-            getMovies(searchValue);
-            getSeries(searchValue);
+            getAll(searchValue);
             setSearchValue("");
         }
     }
