@@ -21,10 +21,10 @@ function Searchbar() {
 
     return (
         <>
-            <nav className="container">
+            <nav>
                 <label htmlFor="searchbar"></label>
-                <input type="search" id="searchbar" placeholder="Cerca..." value={searchValue} onChange={(event) => setSearchValue(event.target.value)} onKeyUp={handleKeyUp} />
-                <button type="submit" onClick={handleClick}>Invia</button>
+                <input className="searchbar" type="search" id="searchbar" placeholder="Titles, people, genres..." value={searchValue} onChange={(event) => setSearchValue(event.target.value)} onKeyUp={handleKeyUp} />
+                {/* <button type="submit" onClick={handleClick}>Invia</button> */}
             </nav>
         </>
     )

@@ -25,15 +25,19 @@ function Card(props) {
 
     return (
         <>
-            <div className="card-img">
-                <img src={props.item.poster_path !== null ? `${apiUrlImg}w342${props.item.poster_path}` : `https://placehold.co/342x520`} alt={props.item.title || props.item.name} />
+            <div className="card">
+                {/* Card img */}
+                <div className="card-img">
+                    <img src={props.item.poster_path !== null ? `${apiUrlImg}w342${props.item.poster_path}` : `https://placehold.co/342x520`} alt={props.item.title || props.item.name} />
+                </div>
+                {/* Card body */}
+                <ul className="card-body">
+                    <li>Titolo: {props.item.title || props.item.name}</li>
+                    <li>Data di rilascio: {props.item.release_date}</li>
+                    <li>Voto: {renderStars(props.item.vote_average)}</li>
+                    <li>Language: {renderFlag(props.item.original_language)}</li>
+                </ul>
             </div>
-            <ul className="card card-body">
-                <li>Titolo: {props.item.title || props.item.name}</li>
-                <li>Data di rilascio: {props.item.release_date}</li>
-                <li>Voto: {renderStars(props.item.vote_average)}</li>
-                <li>Language: {renderFlag(props.item.original_language)}</li>
-            </ul>
         </>
     )
 }
